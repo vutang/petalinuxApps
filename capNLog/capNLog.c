@@ -80,7 +80,7 @@ int main(int argc, char *argv[]) {
 
 	pthread_create(&tid, NULL, rx_thread, (void *) &testsz);
 	/*Trigger Capture Controller*/
-	sleep(2);
+	sleep(1);
 	capctl_trig(testsz);
 
 	if (rx_proxy_interface_p->status != PROXY_NO_ERROR)
